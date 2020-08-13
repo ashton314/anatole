@@ -21,7 +21,7 @@ html[data-theme='dark'] {
   --heading-color: rgb(169, 169, 179);
   --body-color: rgb(169, 169, 179);
   --post-color: rgba(0, 0, 0, 0.44);
-  --border-color: rgb(38, 38, 38);
+  --border-color: rgb(60, 60, 60);
   --pre-bg-color: rgb(33, 33, 45);
   --nav-text-color: rgb(191, 191, 191);
   --tag-color: rgb(191, 191, 191);
@@ -36,8 +36,8 @@ html {
 
 body {
   color: var(--body-color);
-  font-family: 'Verdana', sans-serif;
-  font-size: 15px;
+  font-family: 'Avenir', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
   /* width: 100%; */
   /* margin: 0 auto 30px auto; */
   background-color: var(--bg-color);
@@ -47,9 +47,9 @@ body {
 }
 
 p {
-  line-height: 1.9em;
+  line-height: 1.7em;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 a {
@@ -103,7 +103,7 @@ a:visited {
 
 a:hover,
 a:active {
-  color: #2660ab;
+  color: #26a0cb;
 }
 
 /*basic styles ends*/
@@ -302,13 +302,19 @@ a:active {
 }
 
 .post .post-content a {
-  text-decoration: none;
-  letter-spacing: 1px;
-  color: #2660ab;
+  text-decoration:none;
+  background-color: inherit;
+  color: var(--body-color);
+  border-color: #888;
+  border-width: 0 0 1px 0;
+  border-style: none none dotted none;
+  padding: 3px 0px 1px 0px;
 }
 
 .post .post-content a:hover {
-  color: #2F69B3;
+  color: #fff;
+  background-color: #444;
+  border-style: none none solid none;
 }
 
 .post .post-content h3 {
