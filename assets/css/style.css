@@ -757,6 +757,18 @@ a.btn {
   display: none;
 }
 
+@media screen and (min-width: 2200px) {
+    .page-top {
+        width: 55%;
+    }
+}
+
+@media screen and (min-width: 4000px) {
+    .page-top {
+        width: 50%;
+    }
+}
+
 @media screen and (max-width: 900px) {
   .sidebar {
     width: 100%;
