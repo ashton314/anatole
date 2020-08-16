@@ -36,12 +36,14 @@ html {
 
 body {
   color: var(--body-color);
+  /* Consider using "Charter" */
   font-family: 'Avenir', 'Helvetica Neue', 'Helvetica', 'Segoe UI', sans-serif;
   font-size: 16px;
   /* width: 100%; */
   /* margin: 0 auto 30px auto; */
   background-color: var(--bg-color);
 
+  display: flex;
   max-width: 900px;
   margin: 0 auto;
 }
@@ -108,15 +110,16 @@ a:active {
 
 /*basic styles ends*/
 .content {
-  height: auto;
-  float: right;
-  width: 60%;
-  margin-top: 60px;
+    height: calc(vh);
+    overflow-y: scroll;
+    float: right;
+    margin-top: 10px;
+    width: 100%;
 }
 
 .page-top {
-  width: 60%;
-  position: fixed;
+  width: 100%;
+  /* position: fixed; */
   right: 0;
   z-index: 3;
   background-color: var(--bg-color);
@@ -187,17 +190,24 @@ a:active {
 }
 
 .sidebar {
-  width: 250px;
+  /* width: 250px; */
+  width: 40%;
   -webkit-background-size: cover;
   background-size: cover;
   background-color: var(--bg-color);
-  height: 100%;
+  height: calc(vh);
   /* top: 0; */
   /* left: 0; */
-  float: left;
-  position: fixed;
+  /* float: left; */
+  /* position: fixed; */
+  flex: 1 1 auto;
   z-index: 4;
   border-right: 1px solid var(--border-color);
+}
+
+.main {
+    min-width: 700px;
+    flex: 1 1 auto;
 }
 
 .sidebar .logo-title {
@@ -467,7 +477,7 @@ a:active {
   font-size: 10px;
   margin: 0 auto;
   bottom: 0;
-  position: absolute;
+  /* position: absolute; */
   width: 100%;
   padding-bottom: 20px;
 }
@@ -790,6 +800,7 @@ a.btn {
   }
 
   .page-top {
+      position: fixed;
     width: 100%;
   }
 
@@ -798,7 +809,7 @@ a.btn {
   }
 
   .content {
-    margin-top: 420px;
+    margin-top: 240px;
     width: 100%;
     z-index: 2;
     position: absolute;
