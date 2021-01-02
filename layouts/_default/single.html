@@ -17,11 +17,23 @@
     {{ .Content }}
     </div>
     <div class="post-footer">
-      <div class="info">
-        {{ with .Page.Params.Categories }}{{ partial "taxonomy/categories.html" . }}{{ end }}
-        {{ with .Page.Params.Tags }}{{ partial "taxonomy/tags.html" . }}{{ end }}
-      </div>
+	<div class="info">
+            {{ with .Page.Params.Categories }}{{ partial "taxonomy/categories.html" . }}{{ end }}
+            {{ with .Page.Params.Tags }}{{ partial "taxonomy/tags.html" . }}{{ end }}
+	</div>
     </div>
+
+    <div class="utterance-comments">
+	<script src="https://utteranc.es/client.js"
+		repo="ashton314/ashton314.github.io"
+		issue-term="pathname"
+		label="utterance"
+		theme="photon-dark"
+		crossorigin="anonymous"
+		async>
+	</script>
+    </div>
+
 
     {{ if eq .Type "post"}}
     {{ if .Site.DisqusShortname -}}
